@@ -1,0 +1,554 @@
+/*AJUSTES GENERALES*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+section {
+    width: 100vw;
+    overflow: hidden;
+}
+.scroll {
+    position: absolute;
+}
+.landing {
+   height: 49vh;
+   z-index: -1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.landing .logo{
+    position: absolute;
+    width: 50%;
+    top: 15%; 
+}
+.landing img {
+    position: absolute;
+    width: 100%;
+}
+/*BARRA DE NAVEGACION*/
+nav{
+    -webkit-filter: drop-shadow(1px 1px 3px #3d3232); 
+    transition: 0.3s ease-in;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 501;
+}
+nav {
+    height: 10vh;
+    transition: 0.3s ease-in;
+    position: sticky;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 20px;
+    z-index: 5;
+}
+nav a:hover {
+    border: none;
+}
+.burger {
+    display: block;
+    width: 6vh;    
+} 
+.linksnav{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+.linksnav a{
+    background-color: gray;
+    padding: 5px 20px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.linksnav a:first-child{
+    background-color: transparent;
+}
+.logoprotonav {
+    height: 6vh;
+}
+.logonav {
+    cursor: pointer;    
+    border: none;
+    height: 6vh;
+}
+.logonav:hover {
+    border: none;
+}
+.abierto > div{
+    display: none;  
+}
+.cerrado > .linksnav {  
+    width: 100vw;
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+.cerrado {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
+    padding: 0 0 6vh 0;
+} 
+/*PRODUCTOS CONTENIDOS*/
+.productos{
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+.productos > h2{
+    margin-top: 3rem; 
+    font-size: 1rem;
+    font-weight: 300;
+}
+/* SLIDER & IFRAMES */
+.slider-container {
+    height: 100vh;
+    display: inline-flex;
+    overflow: hidden;
+    scrollbar-width: none;
+    transform: translateX(0);
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+}
+iframe {
+    border: none;
+}
+.slide{
+    max-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.slide img{
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 5px 5px 50px -1px var(--shadow);
+    user-select: none;
+}
+.grabbing {
+    cursor: grabbing;
+}
+.grabbing .slide img{
+    transform: scale(0.9);
+}
+.iframe-wheel {
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 90vw;
+    height: 50vh;
+    overflow: hidden;
+}
+.iframes div a {
+    margin-top: -40px;
+    font-size: 1.3em;
+    width: 120px;
+    border-radius: 0.2em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.buy-conquer {
+    background-color: rgb(23, 80, 126);
+}
+.buy-dh {
+    background-color: black;
+}
+.buy-ft {
+    background-color: palevioletred; 
+}
+.buy-fr {
+    background-color:rgb(243, 231, 67);
+}
+.iframes div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.slidebody {
+    overflow: hidden;
+}
+.rueda {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    pointer-events: none;
+}
+.rueda img {
+    max-width:60%;
+}
+.rueda-info {
+    width: 40%;
+    padding-left: 2vw;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    pointer-events: none;
+}
+.rueda-info img{
+    width:120px;
+}
+.rueda-info span{
+    font-size: 1.3em;
+    width: 120px;
+    background-color: rgb(182, 170, 59);
+    border-radius: 0.2em;
+    text-align: center;
+    color: white;
+}
+.amarillo p{
+    color: rgb(182, 170, 59);
+    font-size: 1.5rem;
+}
+.azul p{
+    color: rgb(23, 80, 126);
+}
+.rosa span{
+    background-color: palevioletred;
+}
+.rosa p{
+    color: palevioletred;
+}
+.verde span{
+    background-color:seagreen;
+}
+.verde p{
+    color:seagreen;
+    font-size: 1.5rem;
+}
+.negro span{
+    background-color: black;
+}
+.negro p{
+    color: black;
+}
+.ama  span {
+    background-color: rgb(243, 231, 67);
+}
+.ama p {
+    color: rgb(243, 231, 67);
+}
+.rueda-info p {
+    font-style: italic;
+    font-size: 1em;
+}
+.rueda-info p:first-of-type {
+    font-size: 1.5em;
+}
+/* LINKS */
+.links {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.links a{
+    display: flex;
+}
+.links div {
+    display: flex;
+}
+.links div img {
+    width: 50vw;
+}
+.links img {
+    width: 100vw;
+}
+/*FOOTER CONTENIDOS*/
+footer{
+    background-color: rgb(160, 160, 160);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+footer span{
+    width: 90%;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.minibio{
+    width: 80%;
+}
+.minibio > h5{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+    letter-spacing: 0.4rem;
+    font-style: italic;
+    font-weight: 500;
+}
+.minibio > p{
+    font-size: 0.9em;
+    font-weight: 100;
+    text-align: justify;
+    font-style: italic;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+}
+.redesysocios{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 1.7rem;
+}
+.redes, .socios{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.redes a img{
+    width: 20vw;
+    margin: 1em;
+}
+.socios-footer p{
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+.socios{
+    width: 18vh;
+    height: 27vh;
+    flex-wrap: wrap;
+}
+.socios  a > img{
+    height: 8vh;
+}
+/* RUEDAS */
+.producto {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wheel-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* pointer-events: none; */
+    justify-content: center;
+    font-style: italic;
+}
+.wheel-info img{
+  width:35vw;
+  margin: 1em 0;
+}
+.wheel-info a {
+    text-decoration: none;
+    margin: 0.8em 0; 
+}
+.wheel-info a{
+    font-size: 1.3em;
+    padding: 8px 15px;
+    background-color: rgb(59, 112, 182);
+    border-radius: 0.2em;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white; 
+}
+.azul span{
+    color: rgb(23, 80, 126);
+    font-size: 1.5em;
+}
+/* CONTACTO */
+.contacto {
+    padding-top: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+    text-decoration: none;
+}
+.contacto h1 {
+    font-size: 2em;
+    font-weight: 10;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.ctcconteiner {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.ctcconteiner a {
+    text-decoration: none;
+    color: gray;
+}
+/* RIDERS */
+.ridersconteiner {
+    height: 80vh;
+    display: flex;
+    gap: 1em;
+}
+.ridersitem img{
+    height: 45vh;
+}
+/* VIAJES */
+.viajesconteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.viajesitem img{
+    width: 80vw;
+}
+.viajesitem p{
+    width: 70vw;
+    text-align: justify;
+}
+@media (min-width:800px) {
+    .linksnav{
+        display:flex;
+        justify-content: space-around;
+        width: 100vw;
+        align-content: center;
+    }
+    .abierto > div{
+        display: flex;  
+    }
+    .burger{
+        display: none;
+    }
+    .landing img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .landing {
+        height: 100vh;
+    }
+    .landing .logo{
+        top: 17%; 
+    }
+    .landing h1{
+        font-size: 1.5em;
+    }
+    .productos > div {
+        flex-direction: row;
+    }
+    .productos h2 {
+        font-size: 2.3em;
+        margin-bottom: 1em;
+    }
+    .iframe-wheel {
+        width:49vw;
+        height: 50vh;
+        border: 1px solid grey;
+        border-radius: 1em;
+    }
+    .iframe-wheels {
+        width:30vw;
+        height: 50vh;
+        border: 1px solid grey;
+        border-radius: 1em;
+    }
+    .links {
+        margin-top: 2em;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .links a img{
+        width: 50vw;
+    }
+    .links div img{
+        width: 50vw;
+       
+    }
+    .links img {
+        width: 100vw;
+    }
+    .socios {
+        width: 30vw;
+        height: 40vh;  
+        flex-direction: row;
+    }
+    .socios a img {
+        width:8vw;
+        height:8vw;
+
+    }
+    .redes {
+        height: 40vh;  
+        justify-content: space-between;  
+    }
+    .redes a img{
+        width: 12vw;
+    }
+    .redesysocios {
+        justify-content: space-evenly;
+    }
+    .producto{
+        width: 100vw;
+        padding: 5rem;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        gap: 2em;
+    }
+    .producto div img  {
+        width: 20vw;
+    }
+    .producto div {
+    }
+    .producto h2 {
+        font-size: 2.3em;
+        margin-bottom: 1em;
+    }
+    .wheel-info {
+        max-height: 100vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-style: italic;    
+    }
+    .wheel-info p {
+        text-align: justify;
+    }
+    .ctcconteiner {
+        flex-direction: row;
+        height: 30vh;
+        width: 100vw;
+        justify-content: space-evenly;
+    }
+    .contacto {
+        padding-top: 5em;
+    } 
+    .viajesitem img{
+        width: 45vw;
+    }
+    .viajesitem p{
+        width: 40vw;
+        text-align: justify;
+    }
+    .viajesconteiner {
+        flex-direction: row;
+    }
+}
